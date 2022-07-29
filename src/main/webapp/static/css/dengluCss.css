@@ -1,0 +1,39 @@
+.box{
+    display: flex;
+    align-content: center;
+
+    justify-content: center;
+    width: 100%;
+    height:100%;
+
+}
+.head{
+    display: flex;
+    align-content: center;
+    /*justify-content: center;*/
+
+width: 200px;
+
+
+}
+.inputlabel{
+    width: 210px;
+}
+.inputlabel2{
+    width: 210px;
+
+}
+.btloaction{
+    display: inline;
+
+    width: 210px;
+    height: 100px;
+}
+.bt{
+    width: 105px;
+
+}
+a{
+    text-decoration: none;
+    color:black;
+}
