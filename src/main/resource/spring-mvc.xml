@@ -25,12 +25,15 @@
     </bean>
 
 
-    <!--配置拦截-->
+<!--    配置拦截-->
     <mvc:interceptors>
         <mvc:interceptor>
             <!--对那些资源拦截-->
             <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/demo/denglu"/>
             <bean class="com.Interceptor.MyInterceptor"/>
+
+<!--            排除拦截-->
 
         </mvc:interceptor>
     </mvc:interceptors>

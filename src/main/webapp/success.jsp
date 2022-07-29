@@ -17,6 +17,6 @@
     String user = (String)request.getAttribute("user");
     String pass = (String)request.getAttribute("pass");
 %>
-<h1>账号${user}<%=user%>,密码<%=pass%></h1>
+<h1>账号${user}<%=user%>,密码${pass}</h1>
 </body>
 </html>

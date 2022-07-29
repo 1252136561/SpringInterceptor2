@@ -1,24 +1,28 @@
 package com.Interceptor;
 
+import com.Interceptor.domain.User;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class MyInterceptor implements HandlerInterceptor {
     //最之前
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+
         System.out.println("preHandle...");
 
-        String par = request.getParameter("user");
-        if ("".equals(par)) {
-            return true;//开关打开
-        } else {
-            request.getRequestDispatcher("/denglu.jsp").forward(request, response);
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+        if(user == null ){
+            response.sendRedirect(request.getContextPath()+"/denglu.jsp");
             return false;
         }
+
+        return true;
     }
 
 

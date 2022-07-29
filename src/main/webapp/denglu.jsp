@@ -12,7 +12,7 @@
 <div class="box">
 
 
-    <form action="${pageContext.request.contextPath}/demo/login" method="post">
+    <form action="${pageContext.request.contextPath}/demo/denglu" method="post">
         <div class="inputlabel">
 
             <label for="exampleInputEmail1">账号</label>
@@ -23,7 +23,7 @@
         <div class="inputlabel">
 
             <label for="exampleInputPassword1">密码</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
+            <input type="password" class="form-control" id="exampleInputPassword1" name="pass" placeholder="Password">
         </div>
 
         <div class="btloaction ">
